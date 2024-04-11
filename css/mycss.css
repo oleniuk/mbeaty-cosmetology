@@ -1,0 +1,235 @@
+/* Стилі для попапа */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 100px;
+  z-index: 1001;
+  overflow-y: auto; /* Дозволяє прокручувати попап по вертикалі */
+  /*justify-content: center;
+    align-items: center;*/
+}
+
+.popup-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 25px;
+  width: 100%;
+  position: static;
+  display: block;
+  margin: 0 auto;
+}
+
+.popup-content {
+  /*text-align: center;*/
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.popup-img {
+  max-width: 100%;
+}
+
+.popup-text {
+  padding: 40px;
+  white-space: normal;
+  text-align: start;
+}
+
+.close {
+  /*position: absolute;
+  top: 25px;
+  right: 25px;*/
+  font-size: 50px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+/*===Кнопка + текст====*/
+.form-text-bottom-popup {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-top: 30px;
+  grid-column-gap: 40px;
+}
+
+.button-primary-2 {
+  background-color: #fe68a4;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px 40px;
+  font-weight: 700;
+  line-height: 20px;
+  transition: background-color 0.35s, transform 0.3s, box-shadow 0.3s;
+}
+
+.link-tel-2:hover {
+  transition: font-size 0.3s ease;
+  color: #000;
+  font-size: 105%;
+}
+
+.button-primary-2:hover {
+  background-color: #fe68a4;
+  color: #fff;
+  transform: translate(0, -3px);
+}
+
+.black {
+  color: #000;
+}
+
+/*===END Кнопка + текст====*/
+
+
+.price-gap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.lng-btn {
+  display: flex;
+  column-gap: 13px;
+  justify-content: center;
+}
+
+.hover:hover {
+  transform: scale(1.1);
+}
+
+.lng-active {
+  color: #fe68a4;
+  font-weight: 700;
+}
+
+
+
+
+/* Зображення для телефонів */
+@media only screen and (max-width: 889px) {
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    width: 100%; /* Зображення на всю ширину */
+    display: block; /* Додамо це, щоб вирівняти по центру */
+    margin: 0 auto; /* Вирівнюємо по центру горизонталі */
+  }
+}
+
+/* Зображення для десктопів */
+@media only screen and (min-width: 889px) {
+  .mobile-image {
+    display: none;
+  }
+  .desktop-image {
+    width: 100%; /* Зображення на всю ширину */
+    display: block; /* Додамо це, щоб вирівняти по центру */
+    margin: 0 auto; /* Вирівнюємо по центру горизонталі */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1345px) {
+  .form-text-bottom-popup {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  /*.form-text-bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }*/
+
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup-content img {
+    max-width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .form-text-bottom-popup {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+@media (max-width: 889px) {
+  .form-text-bottom-popup {
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+    justify-items: center;
+  }
+
+  .popup-content img {
+    max-width: 100%;
+}
+
+.form-text-bottom-popup {
+  grid-template-columns: 1fr;
+  grid-row-gap: 15px;
+  justify-items: center;
+}
+
+.popup-text {
+  padding: 20px;
+  font-size: 14px;
+}
+
+ul {
+  padding-left: 0;
+}
+}
+
+@media (max-width: 638px) {
+  .popup {
+    padding: 40px;
+  }
+
+  .popup-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+ .form-text-bottom {
+  text-align: center;
+ }
+
+ .price-gap {
+  row-gap: 20px;
+}
+}
+
